@@ -1,0 +1,59 @@
+@use '../scss/base/colors' as c;
+@use '../scss/utils/mixins' as m;
+
+@mixin schedule-box-shadow() {
+  box-shadow: 10px 10px 25px -10px rgba(c.$clr-sec-blue-dark, 25%);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 16px;
+  font-family: var(--fnt-primary-family);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  @include m.media('tablet', 'desktop') {
+    justify-content: flex-end;
+    flex-direction: row;
+    border-radius: 10rem;
+    width: 445px;
+    height: 48px;
+    @include schedule-box-shadow;
+  }
+}
+
+.form__input {
+  position: absolute;
+  left: 0px;
+  height: 48px;
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  padding-inline: 27px;
+  --clr-input-primary: var(--clr-sec-blue-dark);
+  @include m.media('tablet', 'desktop') {
+    width: 65%;
+  }
+  color: var(--clr-input-primary);
+  border: none;
+  background-color: var(--clr-primary-white);
+  &:is(:not(:focus):invalid) {
+    color: var(--clr-primary-error);
+  }
+  &:focus {
+    color: var(--clr-input-primary);
+    outline: none;
+  }
+  &:placeholder-shown {
+    color: rgba(c.$clr-sec-blue-dark, 90%);
+  }
+  @include m.media('mobile') {
+    position: relative;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    @include schedule-box-shadow;
+  }
+}

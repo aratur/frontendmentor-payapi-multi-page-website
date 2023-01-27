@@ -1,0 +1,14 @@
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+$main-max-width: 1440px;
+$main-width: clamp(327px, 80vw, 1110px);
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+$gap-size-default: 1rem;
+
+// TODO: update this file
+// TODO: review braakpoints after all is done and move them around

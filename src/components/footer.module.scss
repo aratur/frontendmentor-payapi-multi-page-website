@@ -1,0 +1,79 @@
+@use '../scss/utils/mixins' as m;
+
+// .footer,
+// .footer * {
+//   outline: 1px solid red;
+//   // background-color: hsla(0, 0, 0, 0.1);
+// }
+
+.footer {
+  background-color: var(--clr-sec-blackish);
+  display: flex;
+  flex-direction: column;
+  padding-top: 41px;
+  padding-bottom: 55px;
+  align-items: center;
+  row-gap: 40px;
+  @include m.media('tablet', 'desktop') {
+    row-gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 31px;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  @include m.media('tablet', 'desktop') {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 64px;
+  }
+}
+
+.footer__nav__ul {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-ter-gray-light);
+  font-weight: bold;
+  margin: 0;
+  row-gap: 31px;
+  align-items: center;
+  @include m.media('tablet', 'desktop') {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 40px;
+    align-items: center;
+  }
+  a {
+    @include m.hover-animate();
+  }
+  a:hover {
+    color: var(--clr-primary-white);
+  }
+}
+
+.footer__social_container {
+  width: 120px;
+  display: flex;
+  column-gap: 24px;
+  justify-content: center;
+  align-items: center;
+  a img {
+    // same as #fbfcfe
+    // https://codepen.io/sosuke/pen/Pjoqqp
+    filter: invert(90%) sepia(8%) saturate(45%) hue-rotate(186deg)
+      brightness(107%) contrast(100%);
+    @include m.hover-animate-property(filter);
+  }
+
+  a:hover img {
+    // same as #da6d97
+    // https://codepen.io/sosuke/pen/Pjoqqp
+    filter: invert(77%) sepia(55%) saturate(3229%) hue-rotate(294deg)
+      brightness(88%) contrast(94%);
+  }
+}

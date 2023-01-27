@@ -1,0 +1,30 @@
+// variables with color definitions for the website
+
+$clr-sec-blue-dark: #37526d;
+$clr-primary-white: #fbfcfe;
+:root {
+  // primary colors
+  --clr-primary-pink: hsl(337, 48%, 49%);
+  --clr-primary-white: hsl(220, 60%, 99%);
+  --clr-primary-background: hsl(207, 44%, 95%);
+  --test2: hsl(220, 60%, 99%);
+  --clr-primary-error: hsl(359, 87%, 72%);
+
+  // Secondary colors
+  --clr-sec-blue-dark: hsl(208, 33%, 32%);
+  --clr-sec-blue-light: hsl(206, 16%, 50%);
+  --test: hsl(207, 33%, 32%);
+  --test: hsl(220, 60%, 99%);
+  --clr-sec-blackish: hsl(209, 27%, 15%);
+  --clr-sec-pink: hsl(337, 60%, 64%);
+
+  // Tertiary colors
+  --clr-ter-pink: hsl(337, 46%, 75%);
+  --clr-ter-gray: hsl(207, 5%, 57%);
+  --clr-ter-gray-light: hsl(207, 15%, 66%);
+  --clr-ter-blue: hsl(207, 33%, 32%);
+
+  // --test3: #{color.opacity(test, 0.5)};
+  // TODO: remove or update this
+  // --card-box-shadow: 0px 15px 20px -5px hsla(189, 82%, 28%, 15%);
+}

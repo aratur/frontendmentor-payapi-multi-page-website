@@ -1,0 +1,60 @@
+@use '../scss/utils/mixins' as m;
+
+@mixin fnt-button {
+  font-family: var(--fnt-primary-family);
+  font-size: var(--fnt-primary-size);
+  color: var(--clr-primary-white);
+  font-weight: bold;
+  letter-spacing: -0.12px;
+  line-height: auto;
+  border: none;
+  border-radius: 10rem;
+  padding-inline: 27px;
+  height: 48px;
+  // force-align text vertically
+  padding-top: 2px;
+}
+
+.button {
+  @include fnt-button();
+  @include m.hover-animate;
+}
+
+.button_primary {
+  position: relative;
+  background-color: var(--clr-primary-pink);
+  box-shadow: 10px 10px 25px -10px hsla(207, 33%, 32%, 25%);
+  &:hover {
+    background-color: var(--clr-sec-pink);
+  }
+  &:disabled {
+    background-color: var(--clr-ter-pink);
+  }
+}
+
+.button_secondary {
+  background-color: transparent;
+  border: 1px solid var(--clr-primary-white);
+  &:hover {
+    background-color: white;
+    color: var(--clr-sec-blackish);
+  }
+  &:disabled {
+    color: var(--clr-ter-gray);
+    border-color: var(--clr-ter-gray);
+  }
+}
+
+.button_tertiary {
+  background-color: white;
+  border: 1px solid var(--clr-ter-blue);
+  color: var(--clr-ter-blue);
+  &:hover {
+    background-color: var(--clr-ter-blue);
+    color: white;
+  }
+  &:disabled {
+    border-color: var(--clr-ter-gray-light);
+    color: var(--clr-ter-gray-light);
+  }
+}

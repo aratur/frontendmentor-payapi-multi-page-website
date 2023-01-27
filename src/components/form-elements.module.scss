@@ -1,0 +1,66 @@
+@use '../scss/base/colors' as c;
+@use '../scss/base/typography' as f;
+
+.form {
+  font-family: var(--fnt-primary-family);
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+}
+
+.form__input {
+  --clr-input-primary: var(--clr-sec-blackish);
+  padding-inline: 20px;
+  height: 42px;
+  padding-block: 0px 17px;
+  width: 100%;
+  color: var(--clr-input-primary);
+  border: none;
+  border-bottom: 1px solid var(--clr-input-primary);
+  background-color: transparent;
+  &:invalid {
+    --clr-input-primary: var(--clr-primary-error);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:placeholder-shown {
+    --clr-input-primary: var(--clr-ter-gray-light);
+  }
+}
+
+.form__textarea {
+  height: 89px;
+  resize: none;
+}
+
+.form__message {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 11px;
+  letter-spacing: -0.08px;
+  line-height: auto;
+  &-error {
+    color: var(--clr-primary-error);
+  }
+}
+
+.form__input_checkbox_emulated {
+  position: absolute;
+  z-index: 200;
+  width: 24px;
+  height: 24px;
+  background-size: 14px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(-clr-primary-background);
+}
+
+.form__input_checkbox:checked ~ .form__checkbox_emulated {
+  background-image: url('../assets/shared/desktop/icon-check.svg');
+  background-color: var(--clr-primary-pink);
+}
+
+.form__input_checkbox:disabled ~ .form__checkbox_emulated {
+  background-color: var(-clr-primary-white);
+}

@@ -1,0 +1,117 @@
+@use '../scss/utils/mixins' as m;
+
+// .header,
+// .header * {
+//   outline: 1px solid red;
+//   background-color: hsla(0, 0, 0, 0.1);
+// }
+
+.header {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  a {
+    font-weight: bold;
+    @include m.hover-animate-property(color);
+  }
+  .header__button {
+    @include m.media_mobile {
+      display: none;
+    }
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  @include m.media('mobile') {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.header__nav__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 65px;
+  margin-block: 0;
+  gap: 43.5px;
+  @include m.media('mobile') {
+    display: none;
+  }
+  a {
+    color: var(--clr-sec-blue-light);
+  }
+  a:hover {
+    color: var(--clr-sec-blue-dark);
+  }
+}
+
+.nav__input_toggle {
+  ~ label {
+    width: 28px;
+    height: 17px;
+    background-image: url('../assets/shared/mobile/menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include m.media('tablet', 'desktop') {
+      display: none;
+    }
+  }
+}
+
+.nav__input_toggle:not(:checked) ~ .header__nav__ul_mobile {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+// styling for navigation bar on mobile
+.header__nav__ul_mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 32px;
+  padding-top: 48px;
+  width: 300px;
+  height: 100vh;
+  margin-top: 0;
+  background-color: hsla(209, 27%, 15%, 94%);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  opacity: 1;
+  transition: transform 400ms ease-in-out, opacity 400ms ease-in;
+  @include m.media('tablet', 'desktop') {
+    display: none;
+  }
+  .nav__toggle_h_line {
+    margin-top: -6px;
+    margin-bottom: 11px;
+    width: 249px;
+    height: 1px;
+    background-color: var(--clr-sec-blue-light);
+  }
+  > * {
+    width: 249px;
+    text-align: center;
+  }
+  > label {
+    height: 23px;
+    background-image: url('../assets/shared/mobile/close.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  a {
+    color: var(--clr-ter-gray-light);
+    font-size: 20px;
+  }
+  a:hover {
+    color: var(--clr-primary-white);
+  }
+}

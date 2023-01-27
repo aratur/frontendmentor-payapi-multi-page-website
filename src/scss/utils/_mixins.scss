@@ -1,0 +1,83 @@
+@use '../base/constants' as *;
+@use 'sass:map';
+@use 'sass:list';
+
+$click-animation-duration: 100ms;
+
+@mixin click-animation {
+  transform: scale(0.9);
+  transition-duration: $click-animation-duration;
+}
+
+@mixin hover-animate {
+  transition: color 300ms ease 0ms, background-color 300ms ease 0ms;
+}
+
+@mixin hover-animate-property($property-name) {
+  transition: $property-name 300ms ease 0ms;
+}
+
+$breakpoints: (
+  mobile: calc($breakpoint-tablet - 1px),
+  tablet: $breakpoint-tablet,
+  desktop: $breakpoint-desktop,
+);
+
+@mixin media($args...) {
+  @each $arg in $args {
+    @if not map.get($breakpoints, $arg) {
+      @error "L0: #{$breakpoints} are missing the argument #{$arg}";
+    }
+  }
+
+  @if list.length($args) == 2 {
+    @if list.index($args, 'mobile') and list.index($args, 'tablet') {
+      @media (max-width: calc($breakpoint-desktop - 1px)) {
+        @content;
+      }
+    } @else if list.index($args, 'tablet') and list.index($args, 'desktop') {
+      @media (min-width: $breakpoint-tablet) {
+        @content;
+      }
+    } @else {
+      @error 'L1: incorrect parameter list used #{$args}.';
+    }
+  } @else if list.length($args) == 1 {
+    @if list.index($args, 'mobile') {
+      @include media-mobile() {
+        @content;
+      }
+    } @else if list.index($args, 'tablet') {
+      @include media-tablet() {
+        @content;
+      }
+    } @else if list.index($args, 'desktop') {
+      @include media-desktop() {
+        @content;
+      }
+    } @else {
+      @error 'L2: incorrect parameter list used #{$args}.';
+    }
+  } @else {
+    @error 'L3: incorrect no of parameters used #{$args}.';
+  }
+}
+
+$breakpoint-mobile: calc($breakpoint-tablet - 1px);
+@mixin media-mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

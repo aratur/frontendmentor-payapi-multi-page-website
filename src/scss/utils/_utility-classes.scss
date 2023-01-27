@@ -1,0 +1,30 @@
+@use './mixins' as m;
+
+.hidden {
+  display: none !important;
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.page__anchor {
+  --padding-inline: 24px;
+  // max-width: calc(100vw - var(--margin-inline) * 2);
+  // max-width: 3px;
+  padding-inline: var(--padding-inline);
+  @include m.media-tablet {
+    // max-width: 689px;
+    --padding-inline: 39px;
+  }
+  @include m.media-desktop {
+    // max-width: 1110px;
+    --padding-inline: 165px;
+  }
+}
