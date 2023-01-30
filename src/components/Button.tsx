@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import buttons from './buttons.module.scss';
+import buttons from './Button.module.scss';
 
 type Props = {
   buttonClass: 'primary' | 'secondary' | 'tertiary';

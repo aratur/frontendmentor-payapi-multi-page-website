@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './company-logos.module.scss';
+import style from './CompanyLogos.module.scss';
 import tesla from '../assets/shared/desktop/tesla.svg';
 import microsoft from '../assets/shared/desktop/microsoft.svg';
 import hp from '../assets/shared/desktop/hewlett-packard.svg';

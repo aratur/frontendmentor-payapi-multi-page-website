@@ -3,25 +3,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import logo from '../assets/shared/desktop/logo.svg';
-import style from './header.module.scss';
+import style from './Header.module.scss';
 import BackgroundPattern from './BackgroundPattern';
 
 const autoClickCheckbox = () => document.getElementById('navToggle')?.click();
 
 const Header = () => (
   <header className={[style.header, 'page__anchor'].join(' ')}>
-    <BackgroundPattern />
+    <BackgroundPattern dataPageLocation="header" />
     <nav className={style.header__nav}>
-      <img alt="pay API logo" src={logo} />
+      <Link to="/">
+        <img alt="pay API logo" src={logo} />
+      </Link>
       <ul className={style.header__nav__ul}>
         <li>
-          <Link to="/">Pricing</Link>
+          <Link to="/pricing">Pricing</Link>
         </li>
         <li>
-          <Link to="/empty">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <input

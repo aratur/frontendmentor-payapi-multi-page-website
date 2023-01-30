@@ -1,0 +1,36 @@
+@use '../../scss/utils/mixins' as m;
+
+.section[data-section='one'] {
+  padding-bottom: 80px;
+  padding-top: 32px;
+  @include m.media('tablet') {
+    padding-top: 48px;
+    padding-bottom: 100px;
+  }
+  @include m.media('desktop') {
+    padding-block: 74px;
+  }
+}
+
+.section__description_container[data-section='one'] {
+  row-gap: 24px;
+  @include m.media('tablet') {
+    width: 573px;
+    row-gap: 33px;
+  }
+  @include m.media('desktop') {
+    width: 546px;
+    row-gap: 42px;
+  }
+  .any_questions_container {
+    line-height: 15px;
+    margin-top: +2px;
+    @include m.media('tablet') {
+      margin-top: -16px;
+    }
+    @include m.media('desktop') {
+      margin-left: 26px;
+      margin-top: -24px;
+    }
+  }
+}

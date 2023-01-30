@@ -1,4 +1,4 @@
-@use '../scss/utils/mixins' as m;
+@use '../../scss/utils/mixins' as m;
 .img_phone_mockup {
   position: relative;
   height: 240px;
@@ -21,7 +21,8 @@
   top: -11%;
   left: -20%;
   height: 132%;
-  width: 164%;
-  background-image: url('../assets/home/desktop/illustration-phone-mockup.svg');
+  width: 160%;
+  background-image: url('../../assets/home/desktop/illustration-phone-mockup.svg');
   background-size: contain;
+  background-repeat: no-repeat;
 }

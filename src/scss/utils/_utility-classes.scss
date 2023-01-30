@@ -15,16 +15,17 @@
 }
 
 .page__anchor {
-  --padding-inline: 24px;
-  // max-width: calc(100vw - var(--margin-inline) * 2);
-  // max-width: 3px;
-  padding-inline: var(--padding-inline);
+  // screen 365
+  // max-width = 317
+  padding-inline: max(24px, 6.4vw);
   @include m.media-tablet {
     // max-width: 689px;
-    --padding-inline: 39px;
+    // screen 768
+    padding-inline: max(39px, 5.6vw);
   }
   @include m.media-desktop {
     // max-width: 1110px;
-    --padding-inline: 165px;
+    // screen 1440
+    padding-inline: 165px;
   }
 }

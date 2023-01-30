@@ -4,4 +4,8 @@ body {
   font-family: var(--fnt-primary-family);
   min-height: 100vh;
   overflow-x: hidden;
+  color: var(--clr-sec-blue-light);
+  margin: 0 auto;
+  max-width: 1700px;
+  overflow: hidden;
 }

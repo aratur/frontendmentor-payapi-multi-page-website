@@ -4,21 +4,23 @@ import logoLight from '../assets/shared/desktop/logo-light.svg';
 import facebook from '../assets/shared/desktop/facebook.svg';
 import twitter from '../assets/shared/desktop/twitter.svg';
 import linkedin from '../assets/shared/desktop/linkedin.svg';
-import style from './footer.module.scss';
+import style from './Footer.module.scss';
 
 const Footer = () => (
   <footer className={[style.footer, 'page__anchor'].join(' ')}>
     <nav className={style.footer__nav}>
-      <img src={logoLight} alt="pay API logo" />
+      <Link to="/">
+        <img src={logoLight} alt="pay API logo" />
+      </Link>
       <ul className={style.footer__nav__ul}>
         <li>
-          <Link to="/">Pricing</Link>
+          <Link to="/pricing">Pricing</Link>
         </li>
         <li>
-          <Link to="/empty">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

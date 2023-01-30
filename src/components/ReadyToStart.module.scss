@@ -1,0 +1,19 @@
+@use '../scss/utils/mixins' as m;
+
+.ready_to_start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 80px;
+  flex-direction: column;
+  row-gap: 32px;
+  @include m.media('tablet') {
+    padding-block: 100px;
+    row-gap: 40px;
+  }
+  @include m.media('desktop') {
+    padding-block: 96px;
+    flex-direction: row;
+    row-gap: 0;
+  }
+}
