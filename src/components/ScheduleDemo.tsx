@@ -11,15 +11,13 @@ const ScheduleDemo = (props: Props) => {
   const { pageId } = props;
   return (
     <form className={style.form} action="/">
-      <label className="sr_only" htmlFor="scheduleDemoEmail">
-        Enter email address
-      </label>
       <input
         className={style.form__input}
         type="email"
         name="scheduleDemoEmail"
-        id={`scheduleDemoEmail ${pageId}`}
+        id={`scheduleDemoEmail${pageId}`}
         placeholder="Enter email address"
+        aria-label="Enter email address"
       />
       <Button buttonClass="primary">Schedule a Demo</Button>
     </form>

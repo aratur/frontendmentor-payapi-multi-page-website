@@ -8,7 +8,7 @@ import style from './footer.module.scss';
 
 const Footer = () => (
   <footer className={[style.footer, 'page__anchor'].join(' ')}>
-    <nav className={style.footer__nav}>
+    <nav id="footer_navigation" className={style.footer__nav}>
       <Link to="/">
         <img src={logoLight} alt="pay API logo" />
       </Link>

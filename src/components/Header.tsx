@@ -15,7 +15,7 @@ const Header = () => {
       <BackgroundPattern
         dataPageLocation={location.pathname === '/' ? 'home' : 'other'}
       />
-      <nav className={style.header__nav}>
+      <nav id="header_navigation" className={style.header__nav}>
         <Link to="/">
           <img alt="pay API logo" src={logo} />
         </Link>
@@ -33,6 +33,7 @@ const Header = () => {
         <input
           type="checkbox"
           id="navToggle"
+          aria-label="Navigation toggle"
           className={[style.nav__input_toggle, 'sr_only'].join(' ')}
         />
         <label htmlFor="navToggle" aria-hidden />
