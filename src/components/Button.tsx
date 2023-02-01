@@ -1,13 +1,19 @@
 import React, { PropsWithChildren } from 'react';
-import buttons from './Button.module.scss';
+import buttons from './button.module.scss';
 
 type Props = {
   buttonClass: 'primary' | 'secondary' | 'tertiary';
   disabled?: boolean | undefined;
+  onClick?: () => void;
 };
 
 const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
-  const { buttonClass: buttonType, children, disabled = false } = props;
+  const {
+    buttonClass: buttonType,
+    children,
+    disabled = false,
+    onClick,
+  } = props;
 
   const classNames = [
     buttons.button_primary,
@@ -22,9 +28,7 @@ const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
   return (
     <button
       type="button"
-      onClick={() => {
-        // do nothing
-      }}
+      onClick={onClick}
       disabled={disabled}
       className={className.join(' ')}
     >

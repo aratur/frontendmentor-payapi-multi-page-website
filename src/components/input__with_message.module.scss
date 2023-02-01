@@ -1,0 +1,48 @@
+@use '../scss/base/colors' as c;
+
+@mixin input_shared {
+  position: relative;
+  width: 100%;
+  padding-inline: 20px;
+  color: var(--clr-ter-blue);
+  border: none;
+  border-bottom: 1px solid var(--clr-ter-blue);
+  background-color: transparent;
+  &:invalid {
+    border-color: var(--clr-primary-error);
+    color: var(--clr-primary-error);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:placeholder-shown {
+    color: rgba(c.$clr-sec-blue-dark, 0.5);
+  }
+}
+
+.form__input {
+  height: 42px;
+  padding-block: 0px 17px;
+  @include input_shared();
+}
+
+.form__textarea {
+  height: 89px;
+  resize: none;
+  @include input_shared();
+}
+
+.message_container {
+  display: none;
+}
+
+:is(.form__input:invalid) ~ .message_container {
+  margin-top: 8px;
+  margin-bottom: -6px;
+  display: block;
+  margin-left: 20px;
+  font-size: 11px;
+  letter-spacing: -0.08px;
+  line-height: 1;
+  color: var(--clr-primary-error);
+}

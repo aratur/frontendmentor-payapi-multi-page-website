@@ -1,7 +1,7 @@
 import React from 'react';
-import stylePhoneMockUp from './ImgPhoneMockup.module.scss';
-import styleImgEasyToImplement from './ImgEasyToImplement.module.scss';
-import styleImgSimpleUI from './ImgSimpleUI.module.scss';
+import stylePhoneMockUp from './img_phone_mockup.module.scss';
+import styleImgEasyToImplement from './img_easy_to_implement.module.scss';
+import styleImgSimpleUI from './img_simple_ui.module.scss';
 
 type Props = {
   img: 'PhoneMockUp' | 'EasyToImplement' | 'SimpleUI';

@@ -21,7 +21,7 @@
   @include m.media-tablet {
     // max-width: 689px;
     // screen 768
-    padding-inline: max(39px, 5.6vw);
+    padding-inline: max(39px, 5vw);
   }
   @include m.media-desktop {
     // max-width: 1110px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './CompanyLogos.module.scss';
+import style from './company_logos.module.scss';
 import tesla from '../assets/shared/desktop/tesla.svg';
 import microsoft from '../assets/shared/desktop/microsoft.svg';
 import hp from '../assets/shared/desktop/hewlett-packard.svg';
@@ -15,16 +15,12 @@ const CompanyLogos = (props: Props) => {
   const { fill } = props;
   return (
     <div className={style.partner_logos_container} data-fill={fill}>
-      {/* <div className={style.partner_logos_row}> */}
       <img src={tesla} alt="Tesla's logo" />
       <img src={microsoft} alt="Microsoft's logo" />
       <img src={hp} alt="HP's logo" />
-      {/* </div>
-      <div className={style.partner_logos_row}> */}
       <img src={oracle} alt="Oracle's logo" />
       <img src={google} alt="Google's logo" />
       <img src={nvidia} alt="Nvidia's logo" />
-      {/* </div> */}
     </div>
   );
 };

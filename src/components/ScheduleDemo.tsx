@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import Button from './Button';
-import style from './ScheduleDemo.module.scss';
+import style from './schedule_demo.module.scss';
 
 const ScheduleDemo = () => (
   <form className={style.form} action="">
@@ -15,7 +15,6 @@ const ScheduleDemo = () => (
       id="scheduleDemoEmail"
       placeholder="Enter email address"
     />
-
     <Button buttonClass="primary">Schedule a Demo</Button>
   </form>
 );

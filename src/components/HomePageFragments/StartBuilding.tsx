@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from '../../pages/home.module.scss';
-import ownStyle from './StartBuilding.module.scss';
+import ownStyle from './start_building.module.scss';
 import ImgWithShadow from './ImgWithShadow';
 import ScheduleDemo from '../ScheduleDemo';
 
@@ -18,7 +18,7 @@ const StartBuilding = () => (
       ].join(' ')}
       data-section="one"
     >
-      <h1>Start building with our APIs for absolutely free.</h1>
+      <h1 className="h1">Start building with our APIs for absolutely free.</h1>
       <ScheduleDemo />
       <div className={ownStyle.any_questions_container}>
         Have any questions?

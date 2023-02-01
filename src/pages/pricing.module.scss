@@ -1,0 +1,100 @@
+@use '../scss/utils/mixins' as m;
+@use '../scss/base/colors' as c;
+
+.pricing_container {
+  text-align: center;
+  @include m.media('desktop') {
+    text-align: left;
+  }
+}
+
+.h2_margin {
+  margin-block: 48px;
+  @include m.media('tablet') {
+    margin-top: 75px;
+    margin-bottom: 69px;
+  }
+  @include m.media('desktop') {
+    margin-top: 82px;
+    margin-bottom: 72px;
+  }
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 48px;
+  @include m.media('tablet', 'desktop') {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 0px;
+  }
+  @include m.media('tablet') {
+    column-gap: 8px;
+  }
+  @include m.media('desktop') {
+    column-gap: 30px;
+  }
+}
+
+.plan_price {
+  font-family: var(--fnt-secondary-family);
+  color: var(--clr-sec-blue-dark);
+  font-size: 56px;
+  line-height: 72px;
+  letter-spacing: -0.43px;
+  @include m.media('tablet') {
+    font-size: 48px;
+  }
+}
+
+.plan_description {
+  line-height: 28px;
+  font-size: 1rem;
+  margin-top: 17px;
+  margin-bottom: 8px;
+  font-weight: 200;
+  @include m.media('tablet') {
+    font-weight: normal;
+    margin-top: 13px;
+    margin-bottom: 19px;
+  }
+  @include m.media('desktop') {
+    font-weight: normal;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.plan__list_container {
+  border-block: 1px solid rgba(c.$clr-sec-blue-dark, 0.25);
+  margin-block: 24px;
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include m.media('desktop') {
+    align-items: flex-start;
+    padding-left: 24px;
+  }
+}
+
+.plan__ul_conditions {
+  text-align: left;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  & > li {
+    font-size: 16px;
+    line-height: 28px;
+    width: max-content;
+    padding-left: 24px;
+    &[data-checked='true'] {
+      list-style-image: url('../assets/shared/desktop/icon-check_red.svg');
+      color: var(--clr-sec-blue-dark);
+    }
+  }
+}

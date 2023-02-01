@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../../pages/home.module.scss';
-import ownStyle from './WhoWeWorkWith.module.scss';
+import ownStyle from './who_we_work_with.module.scss';
 import Button from '../Button';
 import CompanyLogos from '../CompanyLogos';
 import BackgroundPattern from '../BackgroundPattern';
@@ -24,7 +24,7 @@ const WhoWeWorkWith = () => (
       ].join(' ')}
       data-section="two"
     >
-      <h2>Who we work with</h2>
+      <h2 className="h2">Who we work with</h2>
       <p>
         Today, millions of people around the world have successfully connected
         their accounts to apps they love using our API. We provide developers

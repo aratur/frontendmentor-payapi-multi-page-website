@@ -1,0 +1,32 @@
+@use '../scss/base/colors' as c;
+
+.input__checkbox_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 26px;
+  height: 50px;
+  color: c.$clr-sec-blue-dark;
+}
+
+.input__checkbox_label {
+  user-select: none;
+}
+
+.input__checkbox_emulated {
+  min-width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(c.$clr-sec-blue-dark, 0.25);
+}
+
+.input__checkbox:checked ~ .input__checkbox_emulated {
+  background-image: url('../assets/shared/desktop/icon-check.svg');
+  background-color: var(--clr-primary-pink);
+}
+
+.input__checkbox:disabled ~ .input__checkbox_emulated {
+  background-color: var(--clr-primary-white);
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../../pages/home.module.scss';
-import ownStyle from './EasyToImplement.module.scss';
+import ownStyle from './easy_to_implement.module.scss';
 import ImgWithShadow from './ImgWithShadow';
 
 const EasyToImplement = () => (
@@ -16,7 +16,7 @@ const EasyToImplement = () => (
       ].join(' ')}
       data-section="three"
     >
-      <h2>Easy to implement</h2>
+      <h2 className="h2">Easy to implement</h2>
       <p>
         Our API comes with just a few lines of code. You’ll be up and running in
         no time. We built our documentation page to integrate payments

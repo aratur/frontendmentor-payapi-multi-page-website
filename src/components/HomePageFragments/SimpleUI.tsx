@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../../pages/home.module.scss';
-import ownStyle from './SimpleUI.module.scss';
+import ownStyle from './simple_ui.module.scss';
 import ImgWithShadow from './ImgWithShadow';
 import BackgroundPattern from '../BackgroundPattern';
 
@@ -18,7 +18,7 @@ const SimpleUI = () => (
       ].join(' ')}
       data-section="four"
     >
-      <h2>Simple UI & UX</h2>
+      <h2 className="h2">Simple UI & UX</h2>
       <p>
         Our pre-built form is easy to integrate in your app or website’s
         checkout flow and designed to optimize conversion.

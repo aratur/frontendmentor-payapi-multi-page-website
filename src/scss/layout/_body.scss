@@ -5,7 +5,14 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   color: var(--clr-sec-blue-light);
+}
+
+.root {
+  overflow-x: hidden;
   margin: 0 auto;
   max-width: 1700px;
-  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }

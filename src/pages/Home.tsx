@@ -3,7 +3,7 @@ import StartBuilding from '../components/HomePageFragments/StartBuilding';
 import WhoWeWorkWith from '../components/HomePageFragments/WhoWeWorkWith';
 import EasyToImplement from '../components/HomePageFragments/EasyToImplement';
 import SimpleUI from '../components/HomePageFragments/SimpleUI';
-import HomeSectionPersonalFinance from '../components/HomePageFragments/HomeSectionPersonalFinance';
+import PersonalFinance from '../components/HomePageFragments/PersonalFinance';
 import ReadyToStart from '../components/ReadyToStart';
 import style from './home.module.scss';
 
@@ -13,7 +13,7 @@ const Main = () => (
     <WhoWeWorkWith />
     <EasyToImplement />
     <SimpleUI />
-    <HomeSectionPersonalFinance />
+    <PersonalFinance />
     <ReadyToStart />
   </main>
 );

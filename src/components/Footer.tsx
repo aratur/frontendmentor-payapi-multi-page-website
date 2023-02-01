@@ -4,7 +4,7 @@ import logoLight from '../assets/shared/desktop/logo-light.svg';
 import facebook from '../assets/shared/desktop/facebook.svg';
 import twitter from '../assets/shared/desktop/twitter.svg';
 import linkedin from '../assets/shared/desktop/linkedin.svg';
-import style from './Footer.module.scss';
+import style from './footer.module.scss';
 
 const Footer = () => (
   <footer className={[style.footer, 'page__anchor'].join(' ')}>

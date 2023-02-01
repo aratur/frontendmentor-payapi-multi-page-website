@@ -1,0 +1,104 @@
+@use '../scss/base/colors' as c;
+@use '../scss/utils/mixins' as m;
+
+.main {
+  position: relative;
+}
+.about_container {
+  text-align: center;
+  display: grid;
+  row-gap: 40px;
+  color: var(--clr-sec-blue-light);
+  padding-top: 75px;
+  @include m.media('tablet') {
+    row-gap: 64px;
+    padding-top: 75px;
+  }
+  @include m.media('desktop') {
+    row-gap: 56px;
+    padding-top: 82px;
+  }
+}
+
+.about__h2_sizing {
+  @include m.media('desktop') {
+    max-width: 920px;
+    text-align: left;
+    width: 100%;
+    justify-self: center;
+  }
+}
+
+.picture_container {
+  // 423 - distance between siblings
+  // row - gap between siblings
+  width: 87.2vw; // (375 - 2 * margin-inline) / 375
+  aspect-ratio: 1.09; // 327 / 300
+  margin-top: 36px;
+  margin-bottom: 8px;
+  @include m.media('tablet') {
+    margin-top: 28px;
+    margin-bottom: 16px;
+    width: 90vw;
+    aspect-ratio: 2.58;
+  }
+  @include m.media('desktop') {
+    margin-top: 44px;
+    margin-bottom: 8px;
+    width: min(77vw, 1300px);
+    aspect-ratio: 2.2;
+  }
+}
+
+.about__team_picture img {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  left: 0px;
+}
+
+.about__description {
+  display: grid;
+  row-gap: 16px;
+  @include m.media('tablet') {
+    grid-template-columns: 1fr max(456px, 59vw);
+    text-align: left;
+  }
+  @include m.media('desktop') {
+    text-align: left;
+    width: 100%;
+    max-width: 920px;
+    grid-template-columns: 1fr 635px;
+    justify-self: center;
+  }
+}
+
+.about__in_numbers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  @include m.media('tablet', 'desktop') {
+    column-gap: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.about__in_numbers__section {
+  margin-block: 16px;
+  width: 100%;
+}
+
+.about__in_numbers_paragraph {
+  font-size: 16px;
+  color: rgba(c.$clr-sec-blue-dark, 0.7);
+}
+
+.about_important_number {
+  font-family: var(--fnt-secondary-family);
+  color: var(--clr-primary-pink);
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 72px;
+  letter-spacing: -0.43px;
+}
