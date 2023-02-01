@@ -15,7 +15,11 @@ const Header = () => {
       <BackgroundPattern
         dataPageLocation={location.pathname === '/' ? 'home' : 'other'}
       />
-      <nav id="header_navigation" className={style.header__nav}>
+      <nav
+        aria-label="header_navigation"
+        id="header_navigation"
+        className={style.header__nav}
+      >
         <Link to="/">
           <img alt="pay API logo" src={logo} />
         </Link>
