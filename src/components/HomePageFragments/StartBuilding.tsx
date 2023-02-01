@@ -19,10 +19,10 @@ const StartBuilding = () => (
       data-section="one"
     >
       <h1 className="h1">Start building with our APIs for absolutely free.</h1>
-      <ScheduleDemo />
+      <ScheduleDemo pageId="StartBuilding" />
       <div className={ownStyle.any_questions_container}>
         Have any questions?
-        <Link to="/"> Contact Us</Link>
+        <Link to="/contact"> Contact Us</Link>
       </div>
     </div>
     <div className={style.section__image__area_right}>

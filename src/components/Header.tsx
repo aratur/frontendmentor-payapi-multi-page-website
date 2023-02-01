@@ -36,26 +36,28 @@ const Header = () => {
           className={[style.nav__input_toggle, 'sr_only'].join(' ')}
         />
         <label htmlFor="navToggle" aria-hidden />
-        <ul className={style.header__nav__ul_mobile}>
+        <div className={style.header__nav__container_mobile}>
           <label htmlFor="navToggle" aria-hidden />
           <div className={style.nav__toggle_h_line} />
-          <li>
-            <Link to="/pricing" onClick={autoClickCheckbox}>
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={autoClickCheckbox}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={autoClickCheckbox}>
-              Contact
-            </Link>
-          </li>
+          <ul className={style.header__nav__ul_mobile}>
+            <li>
+              <Link to="/pricing" onClick={autoClickCheckbox}>
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={autoClickCheckbox}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={autoClickCheckbox}>
+                Contact
+              </Link>
+            </li>
+          </ul>
           <Button buttonClass="primary">Schedule a Demo</Button>
-        </ul>
+        </div>
       </nav>
       <div className={style.header__button}>
         <Button buttonClass="primary">Schedule a Demo</Button>

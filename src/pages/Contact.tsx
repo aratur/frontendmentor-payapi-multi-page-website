@@ -18,7 +18,7 @@ const Contact = () => {
           Submit a help request and we&apos;ll get in touch shortly.
         </h2>
         <div className={style.contact_container}>
-          <form className={style.form} action="">
+          <form className={style.form} action="/">
             <InputWithMessage
               errorMessage={notEmpty}
               placeholder="Name"

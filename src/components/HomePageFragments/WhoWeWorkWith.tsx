@@ -31,7 +31,9 @@ const WhoWeWorkWith = () => (
         with the tools they need to create easy and accessible experiences for
         their users.
       </p>
-      <Button buttonClass="secondary">About Us</Button>
+      <Button buttonClass="secondary" isLink linkTo="about">
+        About Us
+      </Button>
     </div>
     <div className={style.section__image__area_right}>
       <CompanyLogos fill="light" />

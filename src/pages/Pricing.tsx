@@ -6,7 +6,7 @@ import style from './pricing.module.scss';
 const Pricing = () => (
   <main className={[style.main].join('')}>
     <div className={[style.pricing_container, 'page__anchor'].join(' ')}>
-      <h2 className={[style.h2_margin, '.h2'].join(' ')}>Pricing</h2>
+      <h2 className={[style.h2_margin, 'h2'].join(' ')}>Pricing</h2>
       <div className={style.plans}>
         <div className={style.plan}>
           <h4 className={['h4'].join(' ')}>Free Plan</h4>
