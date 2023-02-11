@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import buttons from './button.module.scss';
 
@@ -20,18 +20,26 @@ const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
     linkTo,
   } = props;
 
-  const classNames = [
-    buttons.button_primary,
-    buttons.button_secondary,
-    buttons.button_tertiary,
-  ];
-  const className = [
-    buttons.button,
-    ...classNames.filter((c) => c.includes(buttonType)),
-  ];
+  const classNames = useMemo(
+    () => [
+      buttons.button_primary,
+      buttons.button_secondary,
+      buttons.button_tertiary,
+    ],
+    []
+  );
+
+  const className = useMemo(
+    () =>
+      [
+        buttons.button,
+        ...classNames.filter((c) => c.includes(buttonType)),
+      ].join(' '),
+    [buttonType, classNames]
+  );
 
   return isLink ? (
-    <Link to={`/${linkTo}`} className={className.join(' ')}>
+    <Link to={`/${linkTo}`} className={className}>
       {children}
     </Link>
   ) : (
@@ -39,7 +47,7 @@ const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={className.join(' ')}
+      className={className}
     >
       {children}
     </button>

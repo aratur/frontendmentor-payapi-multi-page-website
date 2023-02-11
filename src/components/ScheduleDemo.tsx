@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import Button from './Button';
+import Button from './Button/Button';
 import style from './schedule_demo.module.scss';
 
 type Props = {

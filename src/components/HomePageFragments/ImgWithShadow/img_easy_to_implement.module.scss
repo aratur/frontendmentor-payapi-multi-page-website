@@ -1,4 +1,4 @@
-@use '../../scss/utils/mixins' as m;
+@use '../../../scss/utils/mixins' as m;
 .img_easy_to_implement {
   position: relative;
   height: 209px;
@@ -20,7 +20,7 @@
   left: -12.5%;
   height: 157%;
   width: 156%;
-  background-image: url('../../assets/home/desktop/illustration-easy-to-implement.svg');
+  background-image: url('../../../assets/home/desktop/illustration-easy-to-implement.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }

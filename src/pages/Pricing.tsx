@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import ReadyToStart from '../components/ReadyToStart';
 import style from './pricing.module.scss';
 

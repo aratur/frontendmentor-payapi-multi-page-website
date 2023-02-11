@@ -1,7 +1,7 @@
 import React from 'react';
-import iconPersonalFinance from '../../assets/home/desktop/icon-personal-finances.svg';
-import iconBankingAndCoverage from '../../assets/home/desktop/icon-banking-and-coverage.svg';
-import iconConsumerPayment from '../../assets/home/desktop/icon-consumer-payments.svg';
+import iconPersonalFinance from '../../../assets/home/desktop/icon-personal-finances.svg';
+import iconBankingAndCoverage from '../../../assets/home/desktop/icon-banking-and-coverage.svg';
+import iconConsumerPayment from '../../../assets/home/desktop/icon-consumer-payments.svg';
 import style from './personal_finance.module.scss';
 
 const HomeSectionPersonalFinance = () => (

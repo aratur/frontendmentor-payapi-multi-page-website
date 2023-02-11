@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import Checkbox from '../components/Checkbox';
 import CompanyLogos from '../components/CompanyLogos';
 import ReadyToStart from '../components/ReadyToStart';

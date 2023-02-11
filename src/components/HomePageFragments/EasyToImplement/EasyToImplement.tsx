@@ -1,7 +1,7 @@
 import React from 'react';
-import style from '../../pages/home.module.scss';
+import style from '../../../pages/home.module.scss';
 import ownStyle from './easy_to_implement.module.scss';
-import ImgWithShadow from './ImgWithShadow';
+import ImgWithShadow from '../ImgWithShadow/ImgWithShadow';
 
 const EasyToImplement = () => (
   <section

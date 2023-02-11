@@ -1,23 +1,23 @@
-@use '../../scss/utils/mixins' as m;
+@use '../../../scss/utils/mixins' as m;
 
-.section[data-section='four'] {
-  position: relative;
-  padding-bottom: 80px;
+.section[data-section='three'] {
+  padding-block: 80px;
   @include m.media('tablet') {
-    padding-bottom: 100px;
+    padding-block: 100px;
   }
   @include m.media('desktop') {
-    padding-bottom: 146px;
+    padding-block: 150px;
   }
 }
 
-.section__description_container[data-section='four'] {
+.section__description_container[data-section='three'] {
   row-gap: 24px;
   @include m.media('tablet') {
     width: 573px;
   }
   @include m.media('desktop') {
     width: 445px;
+    margin-right: 94px;
   }
   @include m.media('mobile') {
     h2 {
