@@ -1,5 +1,5 @@
 import React from 'react';
-import ScheduleDemo from './ScheduleDemo';
+import ScheduleDemo from '../ScheduleDemo/ScheduleDemo';
 import style from './ready_to_start.module.scss';
 
 const ReadyToStart = () => (

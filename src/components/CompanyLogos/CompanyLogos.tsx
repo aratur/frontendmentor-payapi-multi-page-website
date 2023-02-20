@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './company_logos.module.scss';
-import tesla from '../assets/shared/desktop/tesla.svg';
-import microsoft from '../assets/shared/desktop/microsoft.svg';
-import hp from '../assets/shared/desktop/hewlett-packard.svg';
-import oracle from '../assets/shared/desktop/oracle.svg';
-import google from '../assets/shared/desktop/google.svg';
-import nvidia from '../assets/shared/desktop/nvidia.svg';
+import tesla from '../../assets/shared/desktop/tesla.svg';
+import microsoft from '../../assets/shared/desktop/microsoft.svg';
+import hp from '../../assets/shared/desktop/hewlett-packard.svg';
+import oracle from '../../assets/shared/desktop/oracle.svg';
+import google from '../../assets/shared/desktop/google.svg';
+import nvidia from '../../assets/shared/desktop/nvidia.svg';
 
 type Props = {
   fill: 'light' | 'dark';

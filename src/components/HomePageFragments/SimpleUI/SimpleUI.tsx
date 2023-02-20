@@ -2,7 +2,7 @@ import React from 'react';
 import style from '../../../pages/home.module.scss';
 import ownStyle from './simple_ui.module.scss';
 import ImgWithShadow from '../ImgWithShadow/ImgWithShadow';
-import BackgroundPattern from '../../BackgroundPattern';
+import BackgroundPattern from '../../BackgroundPattern/BackgroundPattern';
 
 const SimpleUI = () => (
   <section

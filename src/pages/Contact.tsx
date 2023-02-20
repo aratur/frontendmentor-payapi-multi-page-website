@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import Button from '../components/Button/Button';
-import Checkbox from '../components/Checkbox';
-import CompanyLogos from '../components/CompanyLogos';
-import ReadyToStart from '../components/ReadyToStart';
+import Checkbox from '../components/Checkbox/Checkbox';
+import CompanyLogos from '../components/CompanyLogos/CompanyLogos';
+import ReadyToStart from '../components/ReadyToStart/ReadyToStart';
 import style from './contact.module.scss';
-import InputWithMessage from '../components/InputWithMessage';
+import InputWithMessage from '../components/InputWithMessage/InputWithMessage';
 
 const Contact = () => {
   const [wasFormSubmitted, setFormSubmitted] = useState<boolean>(false);

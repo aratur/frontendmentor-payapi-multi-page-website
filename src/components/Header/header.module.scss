@@ -1,5 +1,5 @@
-@use '../scss/utils/mixins' as m;
-@use '../scss/base/colors' as c;
+@use '../../scss/utils/mixins' as m;
+@use '../../scss/base/colors' as c;
 
 .header {
   position: relative;
@@ -50,7 +50,7 @@
   ~ label {
     width: 28px;
     height: 17px;
-    background-image: url('../assets/shared/mobile/menu.svg');
+    background-image: url('../../assets/shared/mobile/menu.svg');
     background-repeat: no-repeat;
     background-size: contain;
     @include m.media('tablet', 'desktop') {
@@ -112,9 +112,10 @@
   }
   > label {
     height: 23px;
-    background-image: url('../assets/shared/mobile/close.svg');
+    background-image: url('../../assets/shared/mobile/close.svg');
     background-repeat: no-repeat;
     background-position: right;
+    cursor: pointer;
   }
   > * {
     width: 249px;

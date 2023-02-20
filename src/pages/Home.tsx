@@ -4,7 +4,7 @@ import WhoWeWorkWith from '../components/HomePageFragments/WhoWeWorkWith/WhoWeWo
 import EasyToImplement from '../components/HomePageFragments/EasyToImplement/EasyToImplement';
 import SimpleUI from '../components/HomePageFragments/SimpleUI/SimpleUI';
 import PersonalFinance from '../components/HomePageFragments/PersonalFinance/PersonalFinance';
-import ReadyToStart from '../components/ReadyToStart';
+import ReadyToStart from '../components/ReadyToStart/ReadyToStart';
 import style from './home.module.scss';
 
 const Main = () => (

@@ -1,5 +1,5 @@
-@use '../scss/base/colors' as c;
-@use '../scss/utils/mixins' as m;
+@use '../../scss/base/colors' as c;
+@use '../../scss/utils/mixins' as m;
 
 @mixin schedule-box-shadow() {
   box-shadow: 10px 10px 25px -10px rgba(c.$clr-sec-blue-dark, 25%);

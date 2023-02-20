@@ -2,8 +2,8 @@ import React from 'react';
 import style from '../../../pages/home.module.scss';
 import ownStyle from './who_we_work_with.module.scss';
 import Button from '../../Button/Button';
-import CompanyLogos from '../../CompanyLogos';
-import BackgroundPattern from '../../BackgroundPattern';
+import CompanyLogos from '../../CompanyLogos/CompanyLogos';
+import BackgroundPattern from '../../BackgroundPattern/BackgroundPattern';
 
 const WhoWeWorkWith = () => (
   <section

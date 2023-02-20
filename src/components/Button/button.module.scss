@@ -18,6 +18,7 @@
 .button {
   @include fnt-button();
   @include m.hover-animate;
+  cursor: pointer;
 }
 
 .button_primary {

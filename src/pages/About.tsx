@@ -1,5 +1,5 @@
 import React from 'react';
-import ReadyToStart from '../components/ReadyToStart';
+import ReadyToStart from '../components/ReadyToStart/ReadyToStart';
 import style from './about.module.scss';
 import teamMobile from '../assets/about/mobile/image-team-members.jpg';
 import teamTablet from '../assets/about/tablet/image-team-members.jpg';

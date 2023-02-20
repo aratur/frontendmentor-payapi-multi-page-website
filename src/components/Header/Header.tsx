@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Button from './Button/Button';
-import logo from '../assets/shared/desktop/logo.svg';
+import Button from '../Button/Button';
+import logo from '../../assets/shared/desktop/logo.svg';
 import style from './header.module.scss';
-import BackgroundPattern from './BackgroundPattern';
+import BackgroundPattern from '../BackgroundPattern/BackgroundPattern';
 
 const autoClickCheckbox = () => document.getElementById('navToggle')?.click();
 

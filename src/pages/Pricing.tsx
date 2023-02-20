@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../components/Button/Button';
-import ReadyToStart from '../components/ReadyToStart';
+import ReadyToStart from '../components/ReadyToStart/ReadyToStart';
 import style from './pricing.module.scss';
 
 const Pricing = () => (
