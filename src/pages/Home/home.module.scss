@@ -1,0 +1,73 @@
+@use '../../scss/utils/mixins' as m;
+@use '../../scss/base/colors' as c;
+
+.home__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__section {
+  display: grid;
+  grid-template-areas:
+    'top'
+    'bottom';
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  justify-items: center;
+  @include m.media('tablet') {
+    row-gap: 48px;
+  }
+  @include m.media('desktop') {
+    grid-template-areas: 'area-left area-right';
+    align-content: center;
+    align-items: center;
+    justify-items: start;
+  }
+
+  a {
+    font-weight: bold;
+    @include m.hover-animate-property(color);
+  }
+  a:hover {
+    color: var(--clr-sec-blue-dark);
+  }
+}
+
+.home__img-area-right {
+  grid-area: top;
+  @include m.media('desktop') {
+    grid-area: area-right;
+  }
+}
+
+.home__img-area-left {
+  grid-area: top;
+  @include m.media('desktop') {
+    grid-area: area-left;
+  }
+}
+
+.home__desc-area-left {
+  grid-area: bottom;
+  @include m.media('desktop') {
+    grid-area: area-left;
+  }
+}
+
+.home__desc-area-right {
+  grid-area: bottom;
+  @include m.media('desktop') {
+    grid-area: area-right;
+  }
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include m.media('desktop') {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

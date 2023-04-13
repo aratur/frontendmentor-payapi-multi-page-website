@@ -8,13 +8,13 @@ import google from '../../assets/shared/desktop/google.svg';
 import nvidia from '../../assets/shared/desktop/nvidia.svg';
 
 type Props = {
-  fill: 'light' | 'dark';
+  variant: 'light' | 'dark';
 };
 
 const CompanyLogos = (props: Props) => {
-  const { fill } = props;
+  const { variant } = props;
   return (
-    <div className={style.partner_logos_container} data-fill={fill}>
+    <div className={style['company-logos__container']} data-variant={variant}>
       <img src={tesla} alt="Tesla's logo" />
       <img src={microsoft} alt="Microsoft's logo" />
       <img src={hp} alt="HP's logo" />

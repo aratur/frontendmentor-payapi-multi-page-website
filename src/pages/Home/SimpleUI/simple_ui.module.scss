@@ -1,0 +1,27 @@
+@use '../../../scss/utils/mixins' as m;
+
+.simple-ui__section {
+  position: relative;
+  padding-bottom: 80px;
+  @include m.media('tablet') {
+    padding-bottom: 100px;
+  }
+  @include m.media('desktop') {
+    padding-bottom: 146px;
+  }
+}
+
+.simple-ui__container {
+  row-gap: 24px;
+  @include m.media('tablet') {
+    width: 573px;
+  }
+  @include m.media('desktop') {
+    width: 445px;
+  }
+  @include m.media('mobile') {
+    h2 {
+      margin-top: calc(48px - 24px);
+    }
+  }
+}

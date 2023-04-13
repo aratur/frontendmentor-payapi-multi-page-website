@@ -1,41 +1,35 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { PropsWithChildren, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import buttons from './button.module.scss';
+import style from './button.module.scss';
 
-type Props = {
-  buttonClass: 'primary' | 'secondary' | 'tertiary';
-  disabled?: boolean | undefined;
-  onClick?: () => void;
+interface Props extends React.ComponentPropsWithoutRef<'button'> {
+  variant: 'primary' | 'secondary' | 'tertiary';
   isLink?: boolean;
   linkTo?: string;
-};
+}
 
 const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
   const {
-    buttonClass: buttonType,
+    variant,
     children,
-    disabled = false,
-    onClick,
     isLink,
+    className: omit,
     linkTo,
+    ...other
   } = props;
 
   const classNames = useMemo(
-    () => [
-      buttons.button_primary,
-      buttons.button_secondary,
-      buttons.button_tertiary,
-    ],
+    () => [style.button_primary, style.button_secondary, style.button_tertiary],
     []
   );
 
   const className = useMemo(
     () =>
-      [
-        buttons.button,
-        ...classNames.filter((c) => c.includes(buttonType)),
-      ].join(' '),
-    [buttonType, classNames]
+      [style.button, ...classNames.filter((c) => c.includes(variant))].join(
+        ' '
+      ),
+    [variant, classNames]
   );
 
   return isLink ? (
@@ -43,12 +37,7 @@ const Button = (props: PropsWithChildren<Props>): React.ReactElement => {
       {children}
     </Link>
   ) : (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className={className}
-    >
+    <button type="button" className={className} {...other}>
       {children}
     </button>
   );

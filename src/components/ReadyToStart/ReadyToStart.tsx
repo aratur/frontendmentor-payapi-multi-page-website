@@ -3,7 +3,7 @@ import ScheduleDemo from '../ScheduleDemo/ScheduleDemo';
 import style from './ready_to_start.module.scss';
 
 const ReadyToStart = () => (
-  <section className={[style.ready_to_start, 'page__anchor'].join(' ')}>
+  <section className={[style['ready-to-start'], 'anchor-page'].join(' ')}>
     <h2 className="h2">Ready to start?</h2>
     <ScheduleDemo pageId="ReadyToStart" />
   </section>

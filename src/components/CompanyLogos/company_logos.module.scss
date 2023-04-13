@@ -1,7 +1,7 @@
 @use '../../scss/utils/mixins' as m;
 // @use '../scss/base/colors' as c;
 
-.partner_logos_container {
+.company-logos__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 27px);
@@ -39,12 +39,12 @@
   }
 }
 
-.partner_logos_container[data-fill='dark'] img {
+.company-logos__container[data-variant='dark'] img {
   filter: invert(31%) sepia(10%) saturate(1831%) hue-rotate(166deg)
     brightness(91%) contrast(90%);
 }
 
-.partner_logos_container[data-fill='light'] img {
+.company-logos__container[data-variant='light'] img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(73deg)
     brightness(103%) contrast(104%);
 }

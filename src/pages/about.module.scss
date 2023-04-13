@@ -1,10 +1,10 @@
 @use '../scss/base/colors' as c;
 @use '../scss/utils/mixins' as m;
 
-.main {
+.about__main {
   position: relative;
 }
-.about_container {
+.about__container {
   text-align: center;
   display: grid;
   row-gap: 40px;
@@ -20,7 +20,7 @@
   }
 }
 
-.about__h2_sizing {
+.h2--desktop {
   @include m.media('desktop') {
     max-width: 920px;
     text-align: left;
@@ -29,7 +29,7 @@
   }
 }
 
-.picture_container {
+.about__picture-island {
   // 423 - distance between siblings
   // row - gap between siblings
   width: 87.2vw; // (375 - 2 * margin-inline) / 375
@@ -50,7 +50,7 @@
   }
 }
 
-.about__team_picture img {
+.about__img {
   position: absolute;
   width: 100%;
   max-width: 100%;
@@ -73,7 +73,7 @@
   }
 }
 
-.about__in_numbers {
+.about__numbers {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -84,17 +84,17 @@
     text-align: left;
   }
 }
-.about__in_numbers__section {
+.about__numbers__section {
   margin-block: 16px;
   width: 100%;
 }
 
-.about__in_numbers_paragraph {
+.about__numbers__paragraph {
   font-size: 16px;
   color: rgba(c.$clr-sec-blue-dark, 0.7);
 }
 
-.about_important_number {
+.about__important {
   font-family: var(--fnt-secondary-family);
   color: var(--clr-primary-pink);
   font-weight: normal;

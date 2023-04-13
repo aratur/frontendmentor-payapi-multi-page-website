@@ -9,7 +9,7 @@ type Props = {
   wasFormSubmitted: boolean;
 };
 
-const InputErrorMessage = (props: Props) => {
+const InputWithMessage = (props: Props) => {
   const { errorMessage, placeholder, isRequired, type, wasFormSubmitted } =
     props;
 
@@ -27,9 +27,9 @@ const InputErrorMessage = (props: Props) => {
       ) : (
         <textarea
           className={style.form__textarea}
-          name="message"
-          placeholder="Message"
-          aria-label="Message"
+          name={placeholder}
+          placeholder={placeholder}
+          aria-label={placeholder}
         />
       )}
       <div className={style.message_container}>{errorMessage}</div>
@@ -37,4 +37,4 @@ const InputErrorMessage = (props: Props) => {
   );
 };
 
-export default InputErrorMessage;
+export default InputWithMessage;

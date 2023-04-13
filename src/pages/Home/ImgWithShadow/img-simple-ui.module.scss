@@ -1,0 +1,26 @@
+@use '../../../scss/utils/mixins' as m;
+.img-simple-ui {
+  position: relative;
+  height: 290px;
+  width: 328px;
+  @include m.media('tablet') {
+    height: 320px;
+    width: 362px;
+  }
+  @include m.media('desktop') {
+    height: 500px;
+    width: 566px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: -11.5%;
+    left: -10%;
+    height: 133%;
+    width: 130%;
+    background-image: url('../../../assets/home/desktop/illustration-simple-ui.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

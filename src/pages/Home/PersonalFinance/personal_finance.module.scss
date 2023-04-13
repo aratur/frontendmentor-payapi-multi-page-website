@@ -1,0 +1,35 @@
+@use '../../../scss/utils/mixins' as m;
+
+.personal-finance__section {
+  align-self: center;
+  display: grid;
+  // grid-template-columns: 328px;
+  row-gap: 49px;
+  @include m.media('tablet') {
+    grid-template-columns: repeat(3, 223px);
+    column-gap: 10px;
+  }
+  @include m.media('desktop') {
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 25px;
+    grid-template-rows: 1fr;
+  }
+  & > * {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+  & img {
+    width: 106px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 16px;
+    @include m.media('tablet') {
+      width: 88px;
+    }
+  }
+  p {
+    line-height: 25px;
+  }
+}

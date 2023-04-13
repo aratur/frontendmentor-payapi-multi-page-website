@@ -28,7 +28,7 @@
   }
 }
 
-.header__nav__ul {
+.header__ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,26 +46,8 @@
   }
 }
 
-.nav__input_toggle {
-  ~ label {
-    width: 28px;
-    height: 17px;
-    background-image: url('../../assets/shared/mobile/menu.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    @include m.media('tablet', 'desktop') {
-      display: none;
-    }
-  }
-}
-
-.nav__input_toggle:not(:checked) ~ .header__nav__container_mobile {
-  transform: translateX(max(300px, 70vw));
-  opacity: 0;
-}
-
 // styling for navigation bar on mobile
-.header__nav__ul_mobile {
+.header__ul--mobile {
   a {
     color: var(--clr-ter-gray-light);
     font-size: 20px;
@@ -81,7 +63,25 @@
   margin-block: 0px;
 }
 
-.header__nav__container_mobile {
+.nav__input {
+  ~ label {
+    width: 28px;
+    height: 17px;
+    background-image: url('../../assets/shared/mobile/menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include m.media('tablet', 'desktop') {
+      display: none;
+    }
+  }
+}
+
+.nav__input--toggle:not(:checked) ~ .header__nav--mobile {
+  transform: translateX(max(300px, 70vw));
+  opacity: 0;
+}
+
+.header__nav--mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -104,7 +104,7 @@
   @include m.media('tablet', 'desktop') {
     display: none;
   }
-  .nav__toggle_h_line {
+  .header__nav--toggle-horizontal-line {
     margin-bottom: 11px;
     width: 249px;
     height: 1px;

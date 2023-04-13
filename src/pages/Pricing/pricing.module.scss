@@ -1,0 +1,39 @@
+@use '../../scss/utils/mixins' as m;
+@use '../../scss/base/colors' as c;
+
+.h2--margin {
+  margin-block: 48px;
+  @include m.media('tablet') {
+    margin-top: 75px;
+    margin-bottom: 69px;
+  }
+  @include m.media('desktop') {
+    margin-top: 82px;
+    margin-bottom: 72px;
+  }
+}
+
+.pricing__container {
+  text-align: center;
+  @include m.media('desktop') {
+    text-align: left;
+  }
+
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 48px;
+    @include m.media('tablet', 'desktop') {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      row-gap: 0px;
+    }
+    @include m.media('tablet') {
+      column-gap: 8px;
+    }
+    @include m.media('desktop') {
+      column-gap: 30px;
+    }
+  }
+}

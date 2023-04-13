@@ -10,16 +10,16 @@ type Props = {
 const ScheduleDemo = (props: Props) => {
   const { pageId } = props;
   return (
-    <form className={style.form} action="/">
+    <form className={style['schedule-demo__form']} action="/">
       <input
-        className={style.form__input}
+        className={style['schedule-demo__form__input']}
         type="email"
         name="scheduleDemoEmail"
         id={`scheduleDemoEmail${pageId}`}
         placeholder="Enter email address"
         aria-label="Enter email address"
       />
-      <Button buttonClass="primary">Schedule a Demo</Button>
+      <Button variant="primary">Schedule a Demo</Button>
     </form>
   );
 };

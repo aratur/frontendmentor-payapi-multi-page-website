@@ -3,10 +3,10 @@
   "name": "Frontend Mentor - PayAPI multi-page website",
   "icons": [
     {
-      "src": "favicon-32x32.png",
+      "src": "favicon.svg",
       "type": "image/png",
       "sizes": "32x32"
-    },
+    }
   ],
   "start_url": ".",
   "display": "standalone",

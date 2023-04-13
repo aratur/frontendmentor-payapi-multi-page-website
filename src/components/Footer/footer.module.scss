@@ -56,7 +56,7 @@
   }
 }
 
-.footer__social_container {
+.footer__social {
   width: 120px;
   display: flex;
   column-gap: 24px;
@@ -64,7 +64,6 @@
   align-items: center;
   a img {
     // same as #fbfcfe
-    // https://codepen.io/sosuke/pen/Pjoqqp
     filter: invert(90%) sepia(8%) saturate(45%) hue-rotate(186deg)
       brightness(107%) contrast(100%);
     @include m.hover-animate-property(filter);
@@ -72,7 +71,6 @@
 
   a:hover img {
     // same as #da6d97
-    // https://codepen.io/sosuke/pen/Pjoqqp
     filter: invert(77%) sepia(55%) saturate(3229%) hue-rotate(294deg)
       brightness(88%) contrast(94%);
   }

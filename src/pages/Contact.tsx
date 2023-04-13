@@ -12,13 +12,13 @@ const Contact = () => {
   const notEmpty = "This field can't be empty";
   const validEmail = 'Please use a valid email address';
   return (
-    <main className={style.main}>
-      <div className="page__anchor">
+    <main className={style.contact}>
+      <div className="anchor-page">
         <h2 className={[style.contact__h2, 'h2'].join(' ')}>
           Submit a help request and we&apos;ll get in touch shortly.
         </h2>
-        <div className={style.contact_container}>
-          <form className={style.form} action="/">
+        <div className={style['contact__form-island']}>
+          <form className={style.contact__form} action="/">
             <InputWithMessage
               errorMessage={notEmpty}
               placeholder="Name"
@@ -66,7 +66,7 @@ const Contact = () => {
               Stay up-to-date with company announcements and updates to our API
             </Checkbox>
             <Button
-              buttonClass="tertiary"
+              variant="tertiary"
               onClick={() => {
                 setFormSubmitted(true);
               }}
@@ -74,11 +74,11 @@ const Contact = () => {
               Submit
             </Button>
           </form>
-          <div className={style.contact__building_with_us}>
-            <h4 className={style.contact__building_with_us__h4}>
+          <div className={style['contact__building-with-us-island']}>
+            <h4 className={style.contact__h4}>
               Join the thousands of innovators already building with us
             </h4>
-            <CompanyLogos fill="dark" />
+            <CompanyLogos variant="dark" />
           </div>
         </div>
       </div>

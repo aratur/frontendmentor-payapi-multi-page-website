@@ -6,9 +6,9 @@ import teamTablet from '../assets/about/tablet/image-team-members.jpg';
 import teamDesktop from '../assets/about/desktop/image-team-members.jpg';
 
 const About = () => (
-  <main className={style.main}>
-    <div className={[style.about_container, 'page__anchor'].join(' ')}>
-      <h2 className={[style.about__h2_sizing, 'h2'].join(' ')}>
+  <main className={style.about__main}>
+    <div className={[style.about__container, 'anchor-page'].join(' ')}>
+      <h2 className={[style['h2--desktop'], 'h2'].join(' ')}>
         We empower innovators
         <br /> by delivering access to the
         <br /> financial system
@@ -32,27 +32,27 @@ const About = () => (
           traditional financial institutions and developers.
         </p>
       </div>
-      <div className={style.picture_container} aria-hidden>
-        <picture className={style.about__team_picture}>
+      <div className={style['about__picture-island']} aria-hidden>
+        <picture>
           <source media="(min-width: 768px)" srcSet={teamTablet} />
           <source media="(min-width: 1440px)" srcSet={teamDesktop} />
-          <img src={teamMobile} alt="a team" />
+          <img className={style.about__img} src={teamMobile} alt="a team" />
         </picture>
       </div>
-      <div className={style.about__in_numbers}>
-        <div className={style.about__in_numbers__section}>
-          <p className={style.about__in_numbers_paragraph}>Team Members</p>
-          <div className={style.about_important_number}>300+</div>
+      <div className={style.about__numbers}>
+        <div className={style.about__numbers__section}>
+          <p className={style.about__numbers__paragraph}>Team Members</p>
+          <div className={style.about__important}>300+</div>
         </div>
-        <div className={style.about__in_numbers__section}>
-          <p className={style.about__in_numbers_paragraph}>Offices in the US</p>
-          <div className={style.about_important_number}>3</div>
+        <div className={style.about__numbers__section}>
+          <p className={style.about__numbers_paragraph}>Offices in the US</p>
+          <div className={style.about__important}>3</div>
         </div>
-        <div className={style.about__in_numbers__section}>
-          <p className={style.about__in_numbers_paragraph}>
+        <div className={style.about__numbers__section}>
+          <p className={style.about__numbers_paragraph}>
             Transactions analyzed
           </p>
-          <div className={style.about_important_number}>10M+</div>
+          <div className={style.about__important}>10M+</div>
         </div>
       </div>
       <div className={style.about__description}>

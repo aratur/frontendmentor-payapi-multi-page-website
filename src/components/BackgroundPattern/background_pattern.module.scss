@@ -1,8 +1,10 @@
 @use '../../scss/utils/mixins' as m;
 
+// variables
 $pattern-width: 780px;
+$clip-path: path('M 0 0 L 640 0 L 640 780 L 0 780 L 0 0');
 
-.background_pattern {
+.background-pattern {
   position: absolute;
   max-width: $pattern-width;
   width: $pattern-width;
@@ -10,7 +12,7 @@ $pattern-width: 780px;
 }
 
 // + position relative in the header scss
-.background_pattern[data-page='home'] {
+.background-pattern[data-page='home'] {
   z-index: -1;
   left: calc((100vw - $pattern-width) / 2);
   top: -550px;
@@ -25,12 +27,12 @@ $pattern-width: 780px;
     top: -172px;
     right: -140px;
     left: revert;
-    clip-path: path('M 0 0 L 640 0 L 640 780 L 0 780 L 0 0');
+    clip-path: $clip-path;
   }
 }
 
 // + position relative in the header scss
-.background_pattern[data-page='other'] {
+.background-pattern[data-page='other'] {
   z-index: -1;
   top: -644px;
   right: -489px;
@@ -41,15 +43,15 @@ $pattern-width: 780px;
   @include m.media('desktop') {
     right: -140px;
     top: -572px;
-    clip-path: path('M 0 0 L 640 0 L 640 780 L 0 780 L 0 0');
+    clip-path: $clip-path;
   }
 }
 
-// in order to work, requires
+// requires
 //   position: relative;
 //   overflow: hidden
 // in WhoWeWorkWith.module.scss
-.background_pattern[data-page='home-we-work'] {
+.background-pattern[data-page='home-we-work'] {
   left: -235px;
   top: -359px;
   @include m.media('tablet') {
@@ -62,16 +64,16 @@ $pattern-width: 780px;
   }
 }
 
-// in order to work, requires
+// requires
 //   position: relative;
 // in SimpleUI.module.scss
-.background_pattern[data-page='home-simple-ui'] {
+.background-pattern[data-page='home-simple-ui'] {
   display: none;
   @include m.media('desktop') {
     display: inline;
     right: calc($pattern-width / 2 * (-1));
     top: -150px;
     left: unset;
-    clip-path: path('M 0 0 L 390 0 L 390 780 L 0 780 L 0 0');
+    clip-path: $clip-path;
   }
 }

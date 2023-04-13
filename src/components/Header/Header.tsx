@@ -11,19 +11,19 @@ const autoClickCheckbox = () => document.getElementById('navToggle')?.click();
 const Header = () => {
   const location = useLocation();
   return (
-    <header className={[style.header, 'page__anchor'].join(' ')}>
+    <header className={[style.header, 'anchor-page'].join(' ')}>
       <BackgroundPattern
-        dataPageLocation={location.pathname === '/' ? 'home' : 'other'}
+        variant={location.pathname === '/' ? 'home' : 'other'}
       />
       <nav
-        aria-label="header_navigation"
-        id="header_navigation"
+        aria-label="header navigation"
+        id="header navigation"
         className={style.header__nav}
       >
         <Link to="/">
           <img alt="pay API logo" src={logo} />
         </Link>
-        <ul className={style.header__nav__ul}>
+        <ul className={style.header__ul}>
           <li>
             <Link to="/pricing">Pricing</Link>
           </li>
@@ -38,13 +38,17 @@ const Header = () => {
           type="checkbox"
           id="navToggle"
           aria-label="Navigation toggle"
-          className={[style.nav__input_toggle, 'sr_only'].join(' ')}
+          className={[
+            style.nav__input,
+            style['nav__input--toggle'],
+            'sr_only',
+          ].join(' ')}
         />
         <label htmlFor="navToggle" aria-hidden />
-        <div className={style.header__nav__container_mobile}>
+        <div className={style['header__nav--mobile']}>
           <label htmlFor="navToggle" aria-hidden />
-          <div className={style.nav__toggle_h_line} />
-          <ul className={style.header__nav__ul_mobile}>
+          <div className={style['header__nav--toggle-horizontal-line']} />
+          <ul className={style['header__ul--mobile']}>
             <li>
               <Link to="/pricing" onClick={autoClickCheckbox}>
                 Pricing
@@ -61,11 +65,11 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <Button buttonClass="primary">Schedule a Demo</Button>
+          <Button variant="primary">Schedule a Demo</Button>
         </div>
       </nav>
       <div className={style.header__button}>
-        <Button buttonClass="primary">Schedule a Demo</Button>
+        <Button variant="primary">Schedule a Demo</Button>
       </div>
     </header>
   );

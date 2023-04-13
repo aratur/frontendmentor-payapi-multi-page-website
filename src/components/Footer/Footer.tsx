@@ -7,7 +7,7 @@ import linkedin from '../../assets/shared/desktop/linkedin.svg';
 import style from './footer.module.scss';
 
 const Footer = () => (
-  <footer className={[style.footer, 'page__anchor'].join(' ')}>
+  <footer className={[style.footer, 'anchor-page'].join(' ')}>
     <nav
       aria-label="footer_navigation"
       id="footer_navigation"
@@ -28,7 +28,7 @@ const Footer = () => (
         </li>
       </ul>
     </nav>
-    <div className={style.footer__social_container}>
+    <div className={style.footer__social}>
       <a href="https://facebook.com" target="_blank" rel="noreferrer">
         <img src={facebook} alt="facebook link" />
       </a>

@@ -10,11 +10,11 @@ $click-animation-duration: 100ms;
 }
 
 @mixin hover-animate {
-  transition: color 300ms ease 0ms, background-color 300ms ease 0ms;
+  transition: color 200ms ease 0ms, background-color 300ms ease 0ms;
 }
 
 @mixin hover-animate-property($property-name) {
-  transition: $property-name 300ms ease 0ms;
+  transition: $property-name 200ms ease 0ms;
 }
 
 $breakpoints: (

@@ -1,0 +1,49 @@
+@use '../../../scss/utils/mixins' as m;
+@use '../../../scss/base/colors' as c;
+
+.who-we-work-with {
+  position: relative;
+  overflow: hidden;
+  padding-block: 80px;
+  @include m.media('tablet') {
+    padding-block: 88px;
+  }
+  @include m.media('desktop') {
+    padding-block: 100px;
+  }
+}
+
+.who-we-work-with__container {
+  row-gap: 16px;
+  @include m.media('tablet') {
+    width: 457px;
+    row-gap: 24px;
+  }
+  @include m.media('desktop') {
+    position: relative;
+    width: 445px;
+    row-gap: 24px;
+  }
+  @include m.media('mobile') {
+    h2 {
+      margin-top: calc(56px - 24px);
+    }
+  }
+  p {
+    margin-bottom: calc(60px - 16px);
+    @include m.media('tablet', 'desktop') {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// only used in this section
+.who-we-work-with--dark {
+  background-color: var(--clr-sec-blackish);
+  color: rgba(c.$clr-primary-white, 0.7);
+
+  h1,
+  h2 {
+    color: var(--clr-primary-white);
+  }
+}

@@ -1,6 +1,6 @@
 @use '../../scss/base/colors' as c;
 
-.input__checkbox_container {
+.checkbox__container {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -10,11 +10,11 @@
   color: c.$clr-sec-blue-dark;
 }
 
-.input__checkbox_label {
+.checkbox__label {
   user-select: none;
 }
 
-.input__checkbox_emulated {
+.checkbox__emulated {
   min-width: 24px;
   height: 24px;
   background-repeat: no-repeat;
@@ -22,11 +22,11 @@
   background-color: rgba(c.$clr-sec-blue-dark, 0.25);
 }
 
-.input__checkbox:checked ~ .input__checkbox_emulated {
+.checkbox__input:checked ~ .checkbox__emulated {
   background-image: url('../../assets/shared/desktop/icon-check.svg');
   background-color: var(--clr-primary-pink);
 }
 
-.input__checkbox:disabled ~ .input__checkbox_emulated {
+.checkbo__input:disabled ~ .input__checkbox_emulated {
   background-color: var(--clr-primary-white);
 }
