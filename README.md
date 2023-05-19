@@ -1,6 +1,8 @@
 # Frontend Mentor - PayAPI multi-page website solution
 
-This is a solution to the [PayAPI multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+The task involves creating a marketing website project that includes custom form validation. The project consists of four pages and primarily emphasizes the use of HTML and CSS skills, with some basic implementation of React components.
+
+This is a solution to the [PayAPI multi-page website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e).
 
 ## Table of contents
 
@@ -45,5 +47,4 @@ Solution screenshot
 
 ## Author
 
-- Frontend Mentor - [profile](https://www.frontendmentor.io/profile/aratur)
 - Website - [linkedin](https://www.linkedin.com/in/artur-jedrzejczak/)
